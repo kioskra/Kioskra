@@ -102,7 +102,7 @@ body {
 
 .video-hero .hero-content {
     position: absolute;
-    bottom: 65px;
+    top: 65px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -116,7 +116,7 @@ body {
 
 @media (max-width: 1024px) {
     .video-hero .hero-content {
-        bottom: 55px;
+        top: 55px;
         width: calc(100% - 30px);
         padding: 0.9rem 15px;
     }
@@ -124,7 +124,7 @@ body {
 
 @media (max-width: 768px) {
     .video-hero .hero-content {
-        bottom: 45px;
+        top: 45px;
         width: calc(100% - 30px);
         padding: 0.8rem 15px;
     }
@@ -132,7 +132,7 @@ body {
 
 @media (max-width: 480px) {
     .video-hero .hero-content {
-        bottom: 35px;
+        top: 35px;
         padding: 0.75rem 12px;
         width: calc(100% - 24px);
     }
@@ -152,8 +152,9 @@ body {
     font-size: 0.95rem;
     font-weight: 500;
     margin: 0 0 16px 0;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 4px 4px 16px rgba(0, 0, 0, 0.8);
     letter-spacing: 0.5px;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
