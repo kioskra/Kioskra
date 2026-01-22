@@ -45,7 +45,7 @@
 
 <!-- VIDEO HERO -->
 <section class="video-hero" aria-label="Hero Section">
-    <video autoplay muted loop playsinline poster="Source Images/LOGOS/Kioskra Exhibition Logo White.png">
+    <video id="heroVideo" autoplay muted playsinline poster="Source Images/LOGOS/Kioskra Exhibition Logo White.png">
         <source src="Video/hero.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -311,6 +311,20 @@ function slideCarousel(direction) {
 
 <!-- JS -->
 <script src="script.js"></script>
+
+<script>
+    const heroVideo = document.getElementById('heroVideo');
+    const videos = ['Video/hero.mp4', 'Video/Hero2.mp4'];
+    let currentVideoIndex = 0;
+
+    if (heroVideo) {
+        heroVideo.addEventListener('ended', () => {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            heroVideo.src = videos[currentVideoIndex];
+            heroVideo.play();
+        });
+    }
+</script>
 
 </body>
 </html>
