@@ -611,9 +611,10 @@ section p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(201, 161, 74, 0.8);
-    color: #fff;
-    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: #d3d3d3;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 28px;
     padding: 0;
     cursor: pointer;
@@ -628,7 +629,7 @@ section p {
 }
 
 .carousel-btn:hover {
-    background: rgba(201, 161, 74, 1);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .carousel-btn.prev {
