@@ -4,143 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Exhibition Design Portfolio – Kioskra Exhibitions, Delhi</title>
-    
+
+    <!-- Global CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Portfolio Page CSS -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-
-    <style>
-        /* Portfolio Page Specific Styles */
-        body { font-family: 'Poppins', sans-serif; margin: 0; overflow-x: hidden; }
-        
-        .portfolio-header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            padding: 80px 20px 60px;
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .portfolio-section {
-            padding: 60px 20px;
-            background: #fff;
-        }
-
-        .section-heading {
-            max-width: 900px;
-            margin: 0 auto 40px;
-            text-align: center;
-        }
-
-        /* --- Image Carousel Styles --- */
-        .premium-carousel-container {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .premium-carousel-item {
-            display: none;
-            width: 100%;
-        }
-
-        .premium-carousel-item.active {
-            display: block;
-            animation: fadeIn 0.6s;
-        }
-
-        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-
-        .premium-carousel-item img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid white;
-            padding: 12px 16px;
-            cursor: pointer;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            z-index: 10;
-            transition: 0.3s;
-        }
-
-        .nav-btn:hover { background: white; color: black; }
-        .prev { left: 20px; }
-        .next { right: 20px; }
-
-        .carousel-dots { text-align: center; padding: 15px 0; }
-        .dot {
-            height: 12px; width: 12px; margin: 0 5px;
-            background-color: #bbb; border-radius: 50%;
-            display: inline-block; cursor: pointer;
-        }
-        .dot.active { background-color: #1a1a1a; }
-
-        /* --- Video Section Styles --- */
-        .video-container {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            background: #000;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .video-item {
-            display: none;
-            text-align: center;
-        }
-
-        .video-item.active { display: block; }
-
-        .video-item video {
-            width: 100%;
-            display: block;
-        }
-
-        .video-label {
-            padding: 20px;
-            background: #1a1a1a;
-            color: white;
-        }
-
-        /* Stats & CTA */
-        .portfolio-stats {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 60px 20px;
-            background: #f9f9f9;
-        }
-        .stat-item h3 { font-size: 2.5rem; margin: 0; color: #1a1a1a; }
-
-        .btn-cta {
-            display: inline-block;
-            padding: 15px 35px;
-            background: white;
-            color: #1a1a1a;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 700;
-            margin: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .premium-carousel-item img { height: 300px; }
-        }
-    </style>
 </head>
+
 <body>
 
 <header role="banner">
@@ -159,29 +33,43 @@
     <div class="section-heading">
         <h2>Design Gallery</h2>
     </div>
+
     <div class="premium-carousel-container">
-        <div class="premium-carousel-item active"><img src="Source Images/1.jpg" alt="Design 1"></div>
-        <div class="premium-carousel-item"><img src="Source Images/2.png" alt="Design 2"></div>
-        <div class="premium-carousel-item"><img src="Source Images/3.jpg" alt="Design 3"></div>
-        <div class="premium-carousel-item"><img src="Source Images/5.jpg" alt="Design 4"></div>
+        <div class="premium-carousel-item active">
+            <img src="Source Images/1.jpg" alt="Design 1">
+        </div>
+        <div class="premium-carousel-item">
+            <img src="Source Images/2.png" alt="Design 2">
+        </div>
+        <div class="premium-carousel-item">
+            <img src="Source Images/3.jpg" alt="Design 3">
+        </div>
+        <div class="premium-carousel-item">
+            <img src="Source Images/5.jpg" alt="Design 4">
+        </div>
 
         <button class="nav-btn prev" onclick="changeImage(-1)">&#10094;</button>
         <button class="nav-btn next" onclick="changeImage(1)">&#10095;</button>
     </div>
+
     <div class="carousel-dots">
         <span class="dot active" onclick="setImage(0)"></span>
         <span class="dot" onclick="setImage(1)"></span>
         <span class="dot" onclick="setImage(2)"></span>
         <span class="dot" onclick="setImage(3)"></span>
     </div>
-    <h6>Note: The following projects represent exhibition designs created by our founder during prior professional engagements. Execution was carried out by the respective firms</h6>
+
+    <h6>
+        Note: The following projects represent exhibition designs created by our founder during prior professional engagements.
+        Execution was carried out by the respective firms.
+    </h6>
 </section>
 
-<section class="portfolio-section" style="background: #2d2d2d;">
+<section class="portfolio-section portfolio-dark">
     <div class="section-heading">
-        <h2 style="color: white;">3D Walkthroughs</h2>
+        <h2>3D Walkthroughs</h2>
     </div>
-    
+
     <div class="video-container">
         <div class="video-item active">
             <video muted loop playsinline poster="Source Images/LOGOS/Kioskra Transparent.png">
@@ -216,79 +104,81 @@
 </section>
 
 <section class="portfolio-stats">
-    <div class="stat-item"><h3>150+</h3><p>Projects</p></div>
-    <div class="stat-item"><h3>8+</h3><p>Years</p></div>
-    <div class="stat-item"><h3>24/7</h3><p>Support</p></div>
+    <div class="stat-item">
+        <h3>150+</h3>
+        <p>Projects</p>
+    </div>
+    <div class="stat-item">
+        <h3>8+</h3>
+        <p>Years</p>
+    </div>
+    <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Support</p>
+    </div>
 </section>
-
 
 <section class="portfolio-section cta-container-dark">
     <h2>Ready to elevate your brand?</h2>
-    <p style="color: #ccc; margin-bottom: 30px;">Get a free design consultation and custom quote for your next exhibition stall.</p>
-    
+    <p>Get a free design consultation and custom quote for your next exhibition stall.</p>
+
     <div class="button-group">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScSpkGDkNxKqHYnRubMUv0P_fGGsqfynzWbgR-LRO5GaONpeQ/viewform" class="btn-cta quote-btn" target="_blank">Get a Quote</a>
-        
-        <a href="https://wa.me/918882737989?text=Hi%20Kioskra%21%20I%27d%20like%20to%20discuss%20exhibition%20stall%20design." class="btn-cta whatsapp-btn" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA Icon" style="width: 20px; margin-right: 8px; vertical-align: middle;"> WhatsApp Inquiry
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScSpkGDkNxKqHYnRubMUv0P_fGGsqfynzWbgR-LRO5GaONpeQ/viewform"
+           class="btn-cta quote-btn" target="_blank">
+            Get a Quote
+        </a>
+
+        <a href="https://wa.me/918882737989?text=Hi%20Kioskra%21%20I%27d%20like%20to%20discuss%20exhibition%20stall%20design."
+           class="btn-cta whatsapp-btn" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                 alt="WhatsApp" width="20">
+            WhatsApp Inquiry
         </a>
     </div>
 </section>
+
 <script>
-    // --- Image Carousel ---
-    let imgIdx = 0;
-    const imgSlides = document.querySelectorAll('.premium-carousel-item');
-    const dots = document.querySelectorAll('.dot');
+/* Image Carousel */
+let imgIdx = 0;
+const imgSlides = document.querySelectorAll('.premium-carousel-item');
+const dots = document.querySelectorAll('.dot');
 
-    function updateImage() {
-        imgSlides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        imgSlides[imgIdx].classList.add('active');
-        dots[imgIdx].classList.add('active');
-    }
+function updateImage() {
+    imgSlides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    imgSlides[imgIdx].classList.add('active');
+    dots[imgIdx].classList.add('active');
+}
 
-    function changeImage(n) {
-        imgIdx = (imgIdx + n + imgSlides.length) % imgSlides.length;
-        updateImage();
-    }
+function changeImage(n) {
+    imgIdx = (imgIdx + n + imgSlides.length) % imgSlides.length;
+    updateImage();
+}
 
-    function setImage(n) {
-        imgIdx = n;
-        updateImage();
-    }
+function setImage(n) {
+    imgIdx = n;
+    updateImage();
+}
 
-    // --- Video Carousel ---
-    let vidIdx = 0;
-    const vidSlides = document.querySelectorAll('.video-item');
+/* Video Carousel */
+let vidIdx = 0;
+const vidSlides = document.querySelectorAll('.video-item');
 
-    function changeVideo(n) {
-        // 1. Get the current video and pause it
-        const currentVid = vidSlides[vidIdx].querySelector('video');
-        currentVid.pause();
-        currentVid.currentTime = 0; // Reset to start
-        vidSlides[vidIdx].classList.remove('active');
+function changeVideo(n) {
+    const currentVid = vidSlides[vidIdx].querySelector('video');
+    currentVid.pause();
+    currentVid.currentTime = 0;
+    vidSlides[vidIdx].classList.remove('active');
 
-        // 2. Calculate next index
-        vidIdx = (vidIdx + n + vidSlides.length) % vidSlides.length;
+    vidIdx = (vidIdx + n + vidSlides.length) % vidSlides.length;
 
-        // 3. Show new video and play it
-        vidSlides[vidIdx].classList.add('active');
-        const nextVid = vidSlides[vidIdx].querySelector('video');
-        
-        // Use a promise to handle play() to avoid browser errors
-        let playPromise = nextVid.play();
-        if (playPromise !== undefined) {
-            playPromise.then(_ => {}).catch(error => {
-                console.log("Auto-play was prevented. User interaction required.");
-            });
-        }
-    }
+    vidSlides[vidIdx].classList.add('active');
+    vidSlides[vidIdx].querySelector('video').play();
+}
 
-    // Auto-play the first video on load
-    window.onload = function() {
-        const firstVid = vidSlides[0].querySelector('video');
-        firstVid.play();
-    };
+window.onload = () => {
+    vidSlides[0].querySelector('video').play();
+};
 </script>
 
 </body>
