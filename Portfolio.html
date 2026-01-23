@@ -321,6 +321,32 @@
         <h3 class="category-title">Premium Exhibition Stall Designs</h3>
         <p class="category-description">Luxury exhibition stall designs crafted for brands seeking maximum impact. Our premium stalls feature sophisticated aesthetics, premium materials, and innovative layouts that command attention at major trade shows. Perfect for high-end brands at Pragati Maidan, Yashobhoomi, and national exhibitions.</p>
 
+        <!-- Premium Image Carousel -->
+        <div class="premium-carousel-container">
+            <div class="premium-carousel">
+                <div class="premium-carousel-item">
+                    <img src="Source Images/1.jpg" alt="Premium Exhibition Stall Design 1">
+                </div>
+                <div class="premium-carousel-item">
+                    <img src="Source Images/2.png" alt="Premium Exhibition Stall Design 2">
+                </div>
+                <div class="premium-carousel-item">
+                    <img src="Source Images/3.jpg" alt="Premium Exhibition Stall Design 3">
+                </div>
+                <div class="premium-carousel-item">
+                    <img src="Source Images/5.jpg" alt="Premium Exhibition Stall Design 5">
+                </div>
+            </div>
+            <button class="premium-carousel-btn prev" onclick="slidePremiumCarousel(-1)" aria-label="Previous image">&#10094;</button>
+            <button class="premium-carousel-btn next" onclick="slidePremiumCarousel(1)" aria-label="Next image">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot" onclick="currentPremiumSlide(0)"></span>
+                <span class="dot" onclick="currentPremiumSlide(1)"></span>
+                <span class="dot" onclick="currentPremiumSlide(2)"></span>
+                <span class="dot" onclick="currentPremiumSlide(3)"></span>
+            </div>
+        </div>
+
         <div class="portfolio-grid">
             <!-- Project 1 -->
             <div class="portfolio-item">
@@ -518,6 +544,105 @@
                 right: 5px;
             }
         }
+
+        /* Premium Image Carousel Styles */
+        .premium-carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 50px auto 80px;
+        }
+
+        .premium-carousel {
+            display: flex;
+            gap: 30px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .premium-carousel-item {
+            flex: 0 0 100%;
+            min-width: 0;
+            display: none;
+        }
+
+        .premium-carousel-item.active {
+            display: block;
+        }
+
+        .premium-carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .premium-carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid white;
+            color: white;
+            padding: 15px 18px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .premium-carousel-btn:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .premium-carousel-btn.prev {
+            left: 10px;
+        }
+
+        .premium-carousel-btn.next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .carousel-dots .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 8px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-dots .dot.active {
+            background-color: #1a1a1a;
+        }
+
+        @media (max-width: 768px) {
+            .premium-carousel-btn {
+                padding: 10px 12px;
+                font-size: 1rem;
+            }
+
+            .premium-carousel-btn.prev {
+                left: 5px;
+            }
+
+            .premium-carousel-btn.next {
+                right: 5px;
+            }
+
+            .premium-carousel-item img {
+                max-height: 350px;
+            }
+        }
     </style>
 
     <script>
@@ -661,6 +786,33 @@
     // Initialize - show first video
     if (videoItems.length > 0) {
         videoItems[0].style.display = 'block';
+    }
+
+    // Premium Image Carousel
+    let premiumIndex = 0;
+    const premiumItems = document.querySelectorAll('.premium-carousel-item');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+
+    function slidePremiumCarousel(n) {
+        premiumItems.forEach(item => item.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        premiumIndex = (premiumIndex + n + premiumItems.length) % premiumItems.length;
+        premiumItems[premiumIndex].classList.add('active');
+        dots[premiumIndex].classList.add('active');
+    }
+
+    function currentPremiumSlide(n) {
+        premiumItems.forEach(item => item.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        premiumIndex = n;
+        premiumItems[premiumIndex].classList.add('active');
+        dots[premiumIndex].classList.add('active');
+    }
+
+    // Initialize - show first premium carousel image
+    if (premiumItems.length > 0) {
+        premiumItems[0].classList.add('active');
+        dots[0].classList.add('active');
     }
 </script>
 
