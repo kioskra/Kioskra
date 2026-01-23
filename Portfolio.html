@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exhibition Design Portfolio – Kioskra Exhibitions, Delhi</title>
+    <meta name="description" content="Browse our premium exhibition stall designs, 3D renders, and custom booth fabrication projects. Award-winning exhibition designers in Delhi serving India's top brands at Pragati Maidan." />
+    <meta name="keywords" content="exhibition design portfolio, booth design portfolio, exhibition stall designs, 3D exhibition renders, trade show booth design, custom exhibition design Delhi" />
+    <meta name="author" content="Kioskra Exhibitions" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kioskra.com/portfolio" />
+    <meta property="og:title" content="Exhibition Design Portfolio – Kioskra Exhibitions" />
+    <meta property="og:description" content="Premium exhibition stall designs, 3D visualizations, and booth fabrication portfolio designed by Kioskra." />
+    <meta property="og:image" content="Source Images/LOGOS/Kioskra Transparent.png" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://kioskra.com/portfolio" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Source Images/LOGOS/Kioskra Transparent.png" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Portfolio Page Specific Styles */
+        .portfolio-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .portfolio-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            line-height: 1.3;
+        }
+
+        .portfolio-header p {
+            font-size: 1.1rem;
+            margin: 15px 0;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .portfolio-subtitle {
+            color: #ddd;
+            font-size: 0.95rem;
+            margin-top: 30px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-section {
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .portfolio-category {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .category-description {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 35px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h3 {
+            color: white;
+            font-size: 1.3rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        .portfolio-overlay p {
+            color: #ccc;
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 250px;
+            margin: 0;
+        }
+
+        /* Design Credit Badge */
+        .design-credit {
+            background: #f0f0f0;
+            border-left: 4px solid #1a1a1a;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 1000px;
+            border-radius: 5px;
+            text-align: center;
+            color: #666;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .design-credit strong {
+            color: #1a1a1a;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin: 30px 0 15px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-heading p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+        /* CTA Sections */
+        .portfolio-cta {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 10px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .portfolio-cta h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-cta p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+            border: 2px solid white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-cta:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* Stats Section */
+        .portfolio-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .stat-item p {
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .portfolio-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .portfolio-item img {
+                height: 280px;
+            }
+
+            .btn-cta {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 1.5rem;
+            }
+
+            .category-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header role="banner">
+    <a href="index.html" class="logo" aria-label="Kioskra Exhibitions Home">
+    <img src="Source Images/LOGOS/Kioskra Transparent.png" alt="Kioskra Exhibitions Logo" width="40" height="40">
+    <span class="logo-text">Kioskra Exhibition</span>
+</a>
+
+    <nav role="navigation" aria-label="Main Navigation">
+        <a href="index.html#services">Services</a>
+        <a href="Portfolio.html" class="active">Portfolio</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- PAGE HEADER WITH H1 -->
+<section class="portfolio-header">
+    <h1>Exhibition Design Portfolio – Kioskra Exhibitions, Delhi</h1>
+    <p>Discover our premium collection of custom exhibition stall designs, 3D visualizations, and trade show booth projects across India. From concept to execution — see our award-winning work.</p>
+    <p class="portfolio-subtitle">Serving corporate brands at Pragati Maidan, Yashobhoomi & major exhibition venues</p>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio-section">
+    <div class="section-heading">
+        <h2>Our Exhibition Stall Design Portfolio</h2>
+        <p>Premium, futuristic exhibition designs and booth fabrication designed by Kioskra for leading brands. Custom exhibition solutions tailored to every vision.</p>
+    </div>
+
+    <div class="design-credit">
+        <strong>💡 Portfolio Note:</strong> All designs showcased in this portfolio were created and executed by Kioskra Exhibitions. These represent our design expertise and execution capabilities for premium exhibition solutions.
+    </div>
+
+    <!-- CATEGORY 1: PREMIUM EXHIBITION STALLS -->
+    <div class="portfolio-category">
+        <h3 class="category-title">Premium Custom Exhibition Stalls</h3>
+        <p class="category-description">Full-scale exhibition booth designs with premium finishes, interactive displays, and brand-focused layouts. Designed to maximize impact at major trade shows and exhibitions.</p>
+
+        <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="portfolio-item">
+                <img src="Source Images/1.jpg" alt="Custom exhibition stall design - Premium booth layout by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Premium Exhibition Stall</h3>
+                    <p>High-impact booth with interactive zones — Designed by Kioskra</p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="portfolio-item">
+                <img src="Source Images/5.jpg" alt="Exhibition stall fabrication and execution - Pragati Maidan booth designed by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Fabricated Exhibition Stall</h3>
+                    <p>Complete on-site execution and installation — Designed by Kioskra</p>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="portfolio-item">
+                <img src="Source Images/8.jpeg" alt="Corporate exhibition stall - Brand activation booth designed by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Corporate Brand Booth</h3>
+                    <p>Brand-focused exhibition stall design — Designed by Kioskra</p>
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="portfolio-item">
+                <img src="Source Images/9.jpeg" alt="Custom exhibition stall - Artistic booth design by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Artistic Exhibition Stall</h3>
+                    <p>Creative and unique booth concept — Designed by Kioskra</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORY 2: 3D VISUALIZATIONS & RENDERS -->
+    <div class="portfolio-category">
+        <h3 class="category-title">3D Visualizations & CAD Renders</h3>
+        <p class="category-description">Advanced 3D modeling and realistic renders showing booth designs before fabrication. Digital visualization for client approval and project planning.</p>
+
+        <div class="portfolio-grid">
+            <!-- Project 2 -->
+            <div class="portfolio-item">
+                <img src="Source Images/2.png" alt="3D exhibition visualization - Realistic booth rendering designed by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>3D Booth Visualization</h3>
+                    <p>Advanced 3D render for client approval — Designed by Kioskra</p>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="portfolio-item">
+                <img src="Source Images/6.gif" alt="Exhibition design animation - 3D booth concept by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Concept Animation</h3>
+                    <p>Animated 3D design walkthrough — Designed by Kioskra</p>
+                </div>
+            </div>
+
+            <!-- Project 10 -->
+            <div class="portfolio-item">
+                <img src="Source Images/11.jpeg" alt="3D exhibition render - Digital booth mockup designed by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>3D Digital Mockup</h3>
+                    <p>Detailed 3D booth design model — Designed by Kioskra</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORY 3: TRADE SHOW & EVENT BOOTHS -->
+    <div class="portfolio-category">
+        <h3 class="category-title">Trade Show Booth Projects</h3>
+        <p class="category-description">Professional trade show booths and event exhibition setups. Complete booth design and execution for major exhibition venues and corporate events.</p>
+
+        <div class="portfolio-grid">
+            <!-- Project 3 -->
+            <div class="portfolio-item">
+                <img src="Source Images/3.jpg" alt="Trade show booth design - Professional exhibition setup by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Trade Show Booth</h3>
+                    <p>High-impact trade show design — Designed by Kioskra</p>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="portfolio-item">
+                <img src="Source Images/7.png" alt="Modular exhibition booth - Flexible trade show design by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Modular Booth System</h3>
+                    <p>Flexible, reusable booth structure — Designed by Kioskra</p>
+                </div>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="portfolio-item">
+                <img src="Source Images/10.jpeg" alt="Trade show exhibition - Professional booth installation by Kioskra" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h3>Event Exhibition Setup</h3>
+                    <p>Complete event booth execution — Designed by Kioskra</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- STATS SECTION -->
+<section class="portfolio-stats">
+    <div class="stat-item">
+        <h3>150+</h3>
+        <p>Exhibition Projects Completed</p>
+    </div>
+    <div class="stat-item">
+        <h3>8+</h3>
+        <p>Years in Exhibition Industry</p>
+    </div>
+    <div class="stat-item">
+        <h3>50+</h3>
+        <p>Corporate Brands Served</p>
+    </div>
+    <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Dedicated Project Support</p>
+    </div>
+</section>
+
+<!-- WHY CHOOSE KIOSKRA SECTION -->
+<section class="portfolio-section" style="background: #f9f9f9;">
+    <div class="section-heading">
+        <h2>Why Choose Kioskra for Exhibition Design in Delhi?</h2>
+        <p>As a leading exhibition design company in India, we deliver premium, custom booth solutions with end-to-end execution.</p>
+    </div>
+
+    <div class="portfolio-grid">
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
+            <h3 style="color: #1a1a1a; margin-top: 0;">🎨 Custom Exhibition Stall Design</h3>
+            <p style="color: #666;">Tailored booth designs that align with your brand identity and exhibition objectives.</p>
+        </div>
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
+            <h3 style="color: #1a1a1a; margin-top: 0;">🖼️ 3D Visualization & CAD</h3>
+            <p style="color: #666;">Advanced 3D renders before fabrication — see your booth before it's built.</p>
+        </div>
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
+            <h3 style="color: #1a1a1a; margin-top: 0;">⚡ Fast Turnaround</h3>
+            <p style="color: #666;">Quick design approval and execution without compromising on quality.</p>
+        </div>
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
+            <h3 style="color: #1a1a1a; margin-top: 0;">🌍 Pan-India Service</h3>
+            <p style="color: #666;">Exhibition design and execution services across India, based in Delhi.</p>
+        </div>
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
+            <h3 style="color: #1a1a1a; margin-top: 0;">💰 Transparent Pricing</h3>
+            <p style="color: #666;">Clear, competitive pricing with detailed quotes — no hidden charges.</p>
+        </div>
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.08);">
+            <h3 style="color: #1a1a1a; margin-top: 0;">🏆 Award-Winning Designs</h3>
+            <p style="color: #666;">Premium, futuristic exhibition designs that stand out at every trade show.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION FOR SEO -->
+<section class="portfolio-section">
+    <div class="section-heading">
+        <h2>Exhibition Design FAQs</h2>
+        <p>Common questions about our exhibition stall design and trade show booth services.</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto;">
+        <div style="background: white; padding: 25px; margin-bottom: 20px; border-left: 4px solid #1a1a1a; border-radius: 5px;">
+            <h3 style="margin-top: 0; color: #1a1a1a;">How much does custom exhibition stall design cost in Delhi?</h3>
+            <p style="color: #666;">Exhibition stall design costs vary based on size, materials, and complexity. We provide transparent quotes with detailed breakdowns. Contact us for a free consultation and custom pricing based on your requirements.</p>
+        </div>
+
+        <div style="background: white; padding: 25px; margin-bottom: 20px; border-left: 4px solid #1a1a1a; border-radius: 5px;">
+            <h3 style="margin-top: 0; color: #1a1a1a;">What's the difference between custom and modular exhibition stalls?</h3>
+            <p style="color: #666;"><strong>Custom Stalls:</strong> Unique, brand-specific designs for maximum impact. <strong>Modular Stalls:</strong> Flexible, reusable booth systems for multiple exhibitions. We design both based on your needs.</p>
+        </div>
+
+        <div style="background: white; padding: 25px; margin-bottom: 20px; border-left: 4px solid #1a1a1a; border-radius: 5px;">
+            <h3 style="margin-top: 0; color: #1a1a1a;">How long does exhibition stall fabrication take?</h3>
+            <p style="color: #666;">Typical timelines: Design phase (7-10 days) → Fabrication (15-25 days) → On-site execution (2-5 days). Rush projects available on request.</p>
+        </div>
+
+        <div style="background: white; padding: 25px; margin-bottom: 20px; border-left: 4px solid #1a1a1a; border-radius: 5px;">
+            <h3 style="margin-top: 0; color: #1a1a1a;">Do you handle exhibitions at Pragati Maidan and Yashobhoomi?</h3>
+            <p style="color: #666;">Yes! We have extensive experience with exhibitions at Pragati Maidan, Yashobhoomi, and other major venues across India. Our on-site team ensures smooth execution.</p>
+        </div>
+
+        <div style="background: white; padding: 25px; margin-bottom: 20px; border-left: 4px solid #1a1a1a; border-radius: 5px;">
+            <h3 style="margin-top: 0; color: #1a1a1a;">Can you provide 3D visualization before approval?</h3>
+            <p style="color: #666;">Absolutely! We use advanced 3D CAD technology to create realistic booth visualizations. You approve the design before we begin fabrication.</p>
+        </div>
+
+        <div style="background: white; padding: 25px; border-left: 4px solid #1a1a1a; border-radius: 5px;">
+            <h3 style="margin-top: 0; color: #1a1a1a;">What makes Kioskra different from other exhibition designers?</h3>
+            <p style="color: #666;">We combine creative design excellence with seamless execution. Our design-first approach, premium materials, transparent pricing, and dedicated support make us India's trusted exhibition design partner.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="portfolio-cta">
+    <h2>Ready to Design Your Next Exhibition Stall?</h2>
+    <p>Get a free design consultation and custom quote for your trade show booth. Our exhibition designers are ready to bring your vision to life.</p>
+    <div>
+        <a href="#contact" class="btn-cta">Contact Our Designers</a>
+        <a href="https://wa.me/918882737989?text=Hi%20Kioskra%21%20I%27d%20like%20to%20discuss%20exhibition%20stall%20design%20for%20my%20upcoming%20event." class="btn-cta" target="_blank">WhatsApp Inquiry</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #1a1a1a; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+    <p>&copy; 2024 Kioskra Exhibitions. Premium Exhibition Design & Execution Company in Delhi. All rights reserved.</p>
+    <p style="font-size: 0.9rem; opacity: 0.8;">Serving India | Exhibition Design | Booth Fabrication | Trade Show Solutions</p>
+</footer>
+
+</body>
+</html>
