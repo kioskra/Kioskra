@@ -4,44 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Exhibition Design Portfolio – Kioskra Exhibitions, Delhi</title>
-    <meta name="description" content="Browse our premium exhibition stall designs, 3D renders, and custom booth fabrication projects. Award-winning exhibition designers in Delhi serving India's top brands at Pragati Maidan." />
-    <meta name="keywords" content="exhibition design portfolio, booth design portfolio, exhibition stall designs, 3D exhibition renders, trade show booth design, custom exhibition design Delhi" />
-    <meta name="author" content="Kioskra Exhibitions" />
     
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kioskra.com/portfolio" />
-    <meta property="og:title" content="Exhibition Design Portfolio – Kioskra Exhibitions" />
-    <meta property="og:description" content="Premium exhibition stall designs, 3D visualizations, and booth fabrication portfolio designed by Kioskra." />
-    <meta property="og:image" content="Source Images/LOGOS/Kioskra Transparent.png" />
-    
-    <link rel="canonical" href="https://kioskra.com/portfolio" />
-
-    <link rel="icon" type="image/png" href="Source Images/LOGOS/Kioskra Transparent.png" />
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
     <style>
         /* Portfolio Page Specific Styles */
+        body { font-family: 'Poppins', sans-serif; margin: 0; overflow-x: hidden; }
+        
         .portfolio-header {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             color: white;
             padding: 80px 20px 60px;
             text-align: center;
             margin-top: 60px;
-        }
-
-        .portfolio-header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .portfolio-header p {
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
         }
 
         .portfolio-section {
@@ -59,26 +35,23 @@
         .premium-carousel-container {
             position: relative;
             max-width: 1000px;
-            margin: 0 auto 50px;
+            margin: 0 auto;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .premium-carousel-item {
-            display: none; /* Hidden by default */
+            display: none;
             width: 100%;
-            animation: fadeEffect 0.6s;
         }
 
         .premium-carousel-item.active {
-            display: block; /* Shown when active */
+            display: block;
+            animation: fadeIn 0.6s;
         }
 
-        @keyframes fadeEffect {
-            from {opacity: 0.4;}
-            to {opacity: 1;}
-        }
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
 
         .premium-carousel-item img {
             width: 100%;
@@ -87,11 +60,11 @@
             display: block;
         }
 
-        .premium-carousel-btn {
+        .nav-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
+            background: rgba(255,255,255,0.2);
             color: white;
             border: 2px solid white;
             padding: 12px 16px;
@@ -102,50 +75,26 @@
             transition: 0.3s;
         }
 
-        .premium-carousel-btn:hover { background: #000; }
+        .nav-btn:hover { background: white; color: black; }
         .prev { left: 20px; }
         .next { right: 20px; }
 
-        .carousel-dots {
-            text-align: center;
-            padding: 15px 0;
-        }
-
+        .carousel-dots { text-align: center; padding: 15px 0; }
         .dot {
-            height: 12px;
-            width: 12px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            cursor: pointer;
-            transition: 0.3s;
+            height: 12px; width: 12px; margin: 0 5px;
+            background-color: #bbb; border-radius: 50%;
+            display: inline-block; cursor: pointer;
         }
-
         .dot.active { background-color: #1a1a1a; }
 
-        /* --- Grid & Items --- */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .portfolio-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-            height: 300px;
-        }
-
-        /* Video Section Styles */
-        .video-carousel-container {
+        /* --- Video Section Styles --- */
+        .video-container {
             position: relative;
             max-width: 900px;
-            margin: 40px auto;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
         }
 
         .video-item {
@@ -153,30 +102,28 @@
             text-align: center;
         }
 
+        .video-item.active { display: block; }
+
         .video-item video {
             width: 100%;
-            border-radius: 10px;
+            display: block;
         }
 
-        .design-credit {
-            background: #f4f4f4;
-            border-left: 5px solid #1a1a1a;
+        .video-label {
             padding: 20px;
-            margin: 30px auto;
-            max-width: 1000px;
-            font-style: italic;
+            background: #1a1a1a;
+            color: white;
         }
 
+        /* Stats & CTA */
         .portfolio-stats {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             padding: 60px 20px;
             background: #f9f9f9;
-            text-align: center;
         }
-
-        .stat-item h3 { font-size: 2.5rem; margin: 0; }
+        .stat-item h3 { font-size: 2.5rem; margin: 0; color: #1a1a1a; }
 
         .btn-cta {
             display: inline-block;
@@ -191,154 +138,148 @@
 
         @media (max-width: 768px) {
             .premium-carousel-item img { height: 300px; }
-            .portfolio-header h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
 <header role="banner">
-    <a href="index.html" class="logo" aria-label="Kioskra Exhibitions Home">
-        <img src="Source Images/LOGOS/Kioskra Transparent.png" alt="Kioskra Exhibitions Logo" width="40" height="40">
+    <a href="index.html" class="logo">
+        <img src="Source Images/LOGOS/Kioskra Transparent.png" alt="Kioskra Logo" width="40" height="40">
         <span class="logo-text">Kioskra Exhibition</span>
     </a>
-    <nav role="navigation">
-        <a href="index.html#services">Services</a>
-        <a href="Portfolio.html" class="active">Portfolio</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#contact">Contact</a>
-    </nav>
 </header>
 
 <section class="portfolio-header">
-    <h1>Exhibition Design Portfolio</h1>
-    <p>Serving corporate brands at Pragati Maidan, Yashobhoomi & major global venues.</p>
+    <h1>Our Project Portfolio</h1>
+    <p>Premium Exhibition Stall Designs & 3D Walkthroughs</p>
 </section>
 
 <section class="portfolio-section">
     <div class="section-heading">
-        <h2>Premium Stall Design Showcase</h2>
-        <p>Explore our high-impact 3D visualizations and actual executions.</p>
+        <h2>Design Gallery</h2>
     </div>
-
     <div class="premium-carousel-container">
-        <div class="premium-carousel-item active">
-            <img src="Source Images/1.jpg" alt="Exhibition Design 1">
-        </div>
-        <div class="premium-carousel-item">
-            <img src="Source Images/2.png" alt="Exhibition Design 2">
-        </div>
-        <div class="premium-carousel-item">
-            <img src="Source Images/3.jpg" alt="Exhibition Design 3">
-        </div>
-        <div class="premium-carousel-item">
-            <img src="Source Images/6.gif" alt="Exhibition Design 4">
-        </div>
+        <div class="premium-carousel-item active"><img src="Source Images/1.jpg" alt="Design 1"></div>
+        <div class="premium-carousel-item"><img src="Source Images/2.png" alt="Design 2"></div>
+        <div class="premium-carousel-item"><img src="Source Images/3.jpg" alt="Design 3"></div>
+        <div class="premium-carousel-item"><img src="Source Images/5.jpg" alt="Design 4"></div>
 
-        <button class="premium-carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="premium-carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+        <button class="nav-btn prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="nav-btn next" onclick="changeImage(1)">&#10095;</button>
     </div>
-
     <div class="carousel-dots">
-        <span class="dot active" onclick="setSlide(0)"></span>
-        <span class="dot" onclick="setSlide(1)"></span>
-        <span class="dot" onclick="setSlide(2)"></span>
-        <span class="dot" onclick="setSlide(3)"></span>
-    </div>
-
-    <div class="design-credit">
-        <strong>✨ Creative Vision:</strong> Every project showcased is meticulously designed by Kioskra Exhibitions. We focus on bold, functional, and unforgettable brand spaces.
+        <span class="dot active" onclick="setImage(0)"></span>
+        <span class="dot" onclick="setImage(1)"></span>
+        <span class="dot" onclick="setImage(2)"></span>
+        <span class="dot" onclick="setImage(3)"></span>
     </div>
 </section>
 
-<section class="portfolio-section" style="background: #1a1a1a; color: white;">
+<section class="portfolio-section" style="background: #2d2d2d;">
     <div class="section-heading">
-        <h2 style="color:white;">Design Walkthroughs</h2>
-        <p style="color:#ccc;">Experience our 3D animations and spatial designs.</p>
+        <h2 style="color: white;">3D Walkthroughs</h2>
     </div>
-
-    <div class="video-carousel-container">
-        <div class="video-item" style="display: block;">
-            <video autoplay muted loop playsinline>
+    
+    <div class="video-container">
+        <div class="video-item active">
+            <video muted loop playsinline poster="Source Images/LOGOS/Kioskra Transparent.png">
                 <source src="Video/hero.mp4" type="video/mp4">
             </video>
-            <h3>Interactive Concept Walkthrough</h3>
+            <div class="video-label">
+                <h3>Main Concept Walkthrough</h3>
+            </div>
         </div>
+
         <div class="video-item">
-            <video muted loop playsinline>
+            <video muted loop playsinline poster="Source Images/LOGOS/Kioskra Transparent.png">
                 <source src="Video/hero.mp4" type="video/mp4">
             </video>
-            <h3>Stall Layout Animation</h3>
+            <div class="video-label">
+                <h3>Stall Interior Details</h3>
+            </div>
         </div>
 
-        <button class="premium-carousel-btn prev" onclick="changeVideo(-1)">&#10094;</button>
-        <button class="premium-carousel-btn next" onclick="changeVideo(1)">&#10095;</button>
+        <div class="video-item">
+            <video muted loop playsinline poster="Source Images/LOGOS/Kioskra Transparent.png">
+                <source src="Video/hero.mp4" type="video/mp4">
+            </video>
+            <div class="video-label">
+                <h3>Lighting & Texture Animation</h3>
+            </div>
+        </div>
+
+        <button class="nav-btn prev" onclick="changeVideo(-1)">&#10094;</button>
+        <button class="nav-btn next" onclick="changeVideo(1)">&#10095;</button>
     </div>
 </section>
 
 <section class="portfolio-stats">
-    <div class="stat-item">
-        <h3>150+</h3>
-        <p>Projects Completed</p>
-    </div>
-    <div class="stat-item">
-        <h3>8+</h3>
-        <p>Years Experience</p>
-    </div>
-    <div class="stat-item">
-        <h3>24/7</h3>
-        <p>Support</p>
-    </div>
+    <div class="stat-item"><h3>150+</h3><p>Projects</p></div>
+    <div class="stat-item"><h3>8+</h3><p>Years</p></div>
+    <div class="stat-item"><h3>24/7</h3><p>Support</p></div>
 </section>
 
 <section class="portfolio-section" style="background: #1a1a1a; text-align: center; color: white;">
-    <h2>Ready to start your project?</h2>
-    <a href="https://forms.gle/JdxjbBsHTkQdDnZx7" class="btn-cta">Get a Quote</a>
-    <a href="https://wa.me/918882737989" class="btn-cta" style="background: #25D366; color: white; border: none;">WhatsApp Us</a>
+    <h2>Ready to elevate your brand?</h2>
+    <a href="https://wa.me/918882737989" class="btn-cta" style="background: #25D366; color: white;">WhatsApp Inquiry</a>
 </section>
 
-<footer style="background: #000; color: #777; padding: 40px 20px; text-align: center;">
-    <p>&copy; 2026 Kioskra Exhibitions. All rights reserved.</p>
-</footer>
-
 <script>
-    // IMAGE CAROUSEL LOGIC
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.premium-carousel-item');
+    // --- Image Carousel ---
+    let imgIdx = 0;
+    const imgSlides = document.querySelectorAll('.premium-carousel-item');
     const dots = document.querySelectorAll('.dot');
 
-    function showSlides(n) {
-        if (n >= slides.length) slideIndex = 0;
-        if (n < 0) slideIndex = slides.length - 1;
-        
-        slides.forEach(s => s.classList.remove('active'));
+    function updateImage() {
+        imgSlides.forEach(s => s.classList.remove('active'));
         dots.forEach(d => d.classList.remove('active'));
-        
-        slides[slideIndex].classList.add('active');
-        dots[slideIndex].classList.add('active');
+        imgSlides[imgIdx].classList.add('active');
+        dots[imgIdx].classList.add('active');
     }
 
-    function changeSlide(n) {
-        showSlides(slideIndex += n);
+    function changeImage(n) {
+        imgIdx = (imgIdx + n + imgSlides.length) % imgSlides.length;
+        updateImage();
     }
 
-    function setSlide(n) {
-        showSlides(slideIndex = n);
+    function setImage(n) {
+        imgIdx = n;
+        updateImage();
     }
 
-    // VIDEO CAROUSEL LOGIC
-    let vIndex = 0;
-    const vItems = document.querySelectorAll('.video-item');
+    // --- Video Carousel ---
+    let vidIdx = 0;
+    const vidSlides = document.querySelectorAll('.video-item');
 
     function changeVideo(n) {
-        vItems[vIndex].style.display = "none";
-        vItems[vIndex].querySelector('video').pause();
+        // 1. Get the current video and pause it
+        const currentVid = vidSlides[vidIdx].querySelector('video');
+        currentVid.pause();
+        currentVid.currentTime = 0; // Reset to start
+        vidSlides[vidIdx].classList.remove('active');
+
+        // 2. Calculate next index
+        vidIdx = (vidIdx + n + vidSlides.length) % vidSlides.length;
+
+        // 3. Show new video and play it
+        vidSlides[vidIdx].classList.add('active');
+        const nextVid = vidSlides[vidIdx].querySelector('video');
         
-        vIndex = (vIndex + n + vItems.length) % vItems.length;
-        
-        vItems[vIndex].style.display = "block";
-        vItems[vIndex].querySelector('video').play();
+        // Use a promise to handle play() to avoid browser errors
+        let playPromise = nextVid.play();
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {}).catch(error => {
+                console.log("Auto-play was prevented. User interaction required.");
+            });
+        }
     }
+
+    // Auto-play the first video on load
+    window.onload = function() {
+        const firstVid = vidSlides[0].querySelector('video');
+        firstVid.play();
+    };
 </script>
 
 </body>
