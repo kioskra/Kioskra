@@ -17,6 +17,9 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://kioskra.com" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Source Images/LOGOS/Kioskra Transparent.png" />
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
@@ -42,7 +45,7 @@
 
 <!-- VIDEO HERO -->
 <section class="video-hero" aria-label="Hero Section">
-    <video autoplay muted loop playsinline poster="Source Images/LOGOS/Kioskra Exhibition Logo White.png">
+    <video id="heroVideo" autoplay muted playsinline poster="Source Images/LOGOS/Kioskra Exhibition Logo White.png">
         <source src="Video/hero.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -128,13 +131,16 @@
     <div class="carousel-container" role="region" aria-label="Project Gallery">
         <div class="carousel">
             <div class="carousel-track">
-                <img src="Source Images/1.jpeg" alt="Exhibition project 1" loading="lazy">
-                <img src="Source Images/2.jpeg" alt="Exhibition project 2" loading="lazy">
-                <img src="Source Images/3.jpeg" alt="Exhibition project 3" loading="lazy">
-                <img src="Source Images/1.png" alt="Exhibition project 4" loading="lazy">
-                <img src="Source Images/2.png" alt="Exhibition project 5" loading="lazy">
-                <img src="Source Images/8.jpg" alt="Exhibition project 6" loading="lazy">
-                <img src="Source Images/7.jpg" alt="Exhibition project 7" loading="lazy">
+                <img src="Source Images/1.jpg" alt="Exhibition project 1" loading="lazy">
+                <img src="Source Images/2.png" alt="Exhibition project 2" loading="lazy">
+                <img src="Source Images/3.jpg" alt="Exhibition project 3" loading="lazy">
+                <img src="Source Images/5.jpg" alt="Exhibition project 4" loading="lazy">
+                <img src="Source Images/6.gif" alt="Exhibition project 5" loading="lazy">
+                <img src="Source Images/7.png" alt="Exhibition project 6" loading="lazy">
+                <img src="Source Images/8.jpeg" alt="Exhibition project 7" loading="lazy">
+                <img src="Source Images/9.jpeg" alt="Exhibition project 8" loading="lazy">
+                <img src="Source Images/10.jpeg" alt="Exhibition project 9" loading="lazy">
+                <img src="Source Images/11.jpeg" alt="Exhibition project 10" loading="lazy">
             </div>
         </div>
         <button class="carousel-btn prev" onclick="slideCarousel(-1)" aria-label="Previous project">&#10094;</button>
@@ -306,5 +312,24 @@ function slideCarousel(direction) {
 <!-- JS -->
 <script src="script.js"></script>
 
+<script>
+    const heroVideo = document.getElementById('heroVideo');
+    const videos = ['Video/hero.mp4', 'Video/Hero2.mp4'];
+    let currentVideoIndex = 0;
+
+    if (heroVideo) {
+        heroVideo.addEventListener('ended', () => {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            heroVideo.src = videos[currentVideoIndex];
+            heroVideo.play();
+        });
+    }
+</script>
+
 </body>
 </html>
+
+
+
+
+
