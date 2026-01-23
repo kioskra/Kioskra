@@ -184,6 +184,23 @@
     </div>
 </section>
 
+<!-- PREMIUM SECTION -->
+<section id="premium" class="premium-section" aria-label="Premium Exhibition Showcase">
+    <h2 class="center">Our Premium Projects</h2>
+    <p class="center" style="color: #666; font-size: 0.95rem; margin-bottom: 2rem;">Featuring our finest exhibition designs and premium booth fabrication projects</p>
+    <div class="carousel-container premium-carousel-container" role="region" aria-label="Premium Projects Gallery">
+        <div class="carousel premium-carousel">
+            <div class="carousel-track premium-carousel-track">
+                <img src="Source Images/1.jpg" alt="Premium exhibition project 1" loading="lazy">
+                <img src="Source Images/2.png" alt="Premium exhibition project 2" loading="lazy">
+                <img src="Source Images/3.jpg" alt="Premium exhibition project 3" loading="lazy">
+                <img src="Source Images/5.jpg" alt="Premium exhibition project 4" loading="lazy">
+            </div>
+        </div>
+        <button class="carousel-btn premium-carousel-btn prev" onclick="slidePremiumCarousel(-1)" aria-label="Previous premium project">&#10094;</button>
+        <button class="carousel-btn premium-carousel-btn next" onclick="slidePremiumCarousel(1)" aria-label="Next premium project">&#10095;</button>
+    </div>
+</section>
 
 <!-- PORTFOLIO -->
 <section id="portfolio" class="light-bg" aria-label="Exhibition Portfolio - Our Project Gallery">
@@ -348,6 +365,7 @@
 <!-- Carousel Slider Script -->
 <script>
 let currentSlide = 0;
+let premiumCurrentSlide = 0;
 
 function slideCarousel(direction) {
     const track = document.querySelector('.carousel-track');
@@ -367,6 +385,25 @@ function slideCarousel(direction) {
     // Calculate offset: each slide moves by 100% of carousel width
     // We need to account for the gap between images
     const offset = -currentSlide * 100;
+    track.style.transform = `translateX(${offset}%)`;
+}
+
+function slidePremiumCarousel(direction) {
+    const track = document.querySelector('.premium-carousel-track');
+    const imagesData = document.querySelectorAll('.premium-carousel-track img');
+    const totalImages = imagesData.length;
+    
+    premiumCurrentSlide += direction;
+    
+    // Loop carousel
+    if (premiumCurrentSlide >= totalImages) {
+        premiumCurrentSlide = 0;
+    } else if (premiumCurrentSlide < 0) {
+        premiumCurrentSlide = totalImages - 1;
+    }
+    
+    // Calculate offset: each slide moves by 100% of carousel width
+    const offset = -premiumCurrentSlide * 100;
     track.style.transform = `translateX(${offset}%)`;
 }
 </script>

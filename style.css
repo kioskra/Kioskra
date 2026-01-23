@@ -639,6 +639,112 @@ section p {
 .carousel-btn.next {
     right: 0;
 }
+
+/* PREMIUM SECTION */
+.premium-section {
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.premium-carousel-container {
+    position: relative;
+    width: 70%;
+    max-width: 1100px;
+    margin: 2rem auto 0;
+}
+
+.premium-carousel {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    aspect-ratio: 16 / 10;
+    background: #000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.premium-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    width: 100%;
+    gap: 0;
+}
+
+.premium-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 0;
+}
+
+.premium-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 28px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.premium-carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1024px) {
+    .premium-carousel-container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-carousel-container {
+        width: 90%;
+    }
+    
+    .premium-carousel {
+        border-radius: 12px;
+    }
+    
+    .premium-carousel-btn {
+        font-size: 24px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-carousel-container {
+        width: 95%;
+        margin: 1.5rem auto 0;
+    }
+    
+    .premium-carousel {
+        border-radius: 10px;
+    }
+    
+    .premium-carousel-btn {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .footer {
     background: #0a0a0a;
     color: #fff;
