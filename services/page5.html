@@ -61,10 +61,26 @@
 
 <!-- CTA -->
 
-<section class="cta">
-<h2>Contact Us</h2>
-<p>Get in touch for more information.</p>
-<button class="btn" onclick="contact()">Contact on WhatsApp</button>
+<section class="contact-form" aria-label="Get Free Exhibition Consultation">
+    <h2 class="center">Start Your Exhibition Journey - Get Free Design Consultation</h2>
+    <p class="center" style="color: #666; font-size: 0.95rem; margin-bottom: 2rem;">Fill out the form below and our exhibition experts will contact you within 24 hours</p>
+    <form action="https://formsubmit.co/kioskraexhibitions@gmail.com" method="POST" aria-label="Exhibition Enquiry Form">
+        <!-- Hidden inputs -->
+        <input type="hidden" name="_subject" value="New Exhibition Enquiry - Kioskra">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="thankyou.html">
+
+        <!-- Form fields -->
+        <input type="text" name="name" id="name" placeholder="Your Name" required aria-label="Full Name">
+        <input type="text" name="company" id="company" placeholder="Company Name" aria-label="Company Name">
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required aria-label="Phone Number">
+        <input type="text" name="city" id="city" placeholder="Exhibition City" aria-label="City">
+        <textarea name="message" id="message" placeholder="Your Requirement" aria-label="Message"></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+    </form>
+
+
 </section>
 
 <!-- FOOTER / CONTACT -->
