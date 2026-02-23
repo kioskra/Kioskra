@@ -1159,3 +1159,109 @@ header {
         font-size: 0.9rem;
     }
 }
+
+/* Page-specific styles */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    color: #888888;
+    margin-top: 60px;
+}
+
+.hero-specific {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1503428593586-e225b39bddfe');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 160px 20px;
+}
+
+.hero-specific p {
+    font-size: 20px;
+    color: #ccc;
+}
+
+.btn-custom {
+    background: #2a2a2a;
+    color: white;
+    padding: 16px 30px;
+    border: 2px solid #888888;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: #3a3a3a;
+    border-color: #cccccc;
+}
+
+.cta {
+    background: #888888;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+}
+
+/* Additional page-specific grid and card styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #3a3a3a;
+}
+
+.price {
+    background: #2a2a2a;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #3a3a3a;
+}
+
+.process {
+    line-height: 2;
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* Portfolio-specific styles */
+.portfolio-dark {
+    background: #2d2d2d;
+}
+
+.portfolio-dark h2 {
+    color: white;
+}
+
+.wa-icon {
+    width: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
