@@ -11,12 +11,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #000;
     overflow-x: hidden;
 }
 
 a {
-    color: #cccccc;
+    color: #000;
 }
 
 .center {
@@ -207,7 +207,7 @@ header {
 }
 
 .logo:hover {
-    color: #cccccc;
+    color: #fff;
 }
 
 nav a {
@@ -220,7 +220,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #cccccc;
+    color: #fff;
 }
 
 nav a::after {
@@ -390,7 +390,7 @@ section h2 {
 section p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #555;
+    color: #000;
 }
 
 @media (max-width: 1024px) {
@@ -457,7 +457,7 @@ section p {
 }
 
 .service-card h3 {
-    color: #ffffff;
+    color: #000;
     font-size: 1.3rem;
     margin-bottom: 0.8rem;
 }
@@ -611,7 +611,7 @@ section p {
 
 .service-icon {
     font-size: 2rem;
-    color: #888888;
+    color: #000;
     margin-bottom: 15px;
     display: inline-block;
 }
@@ -629,11 +629,11 @@ section p {
 .service-item p {
     font-size: 0.85rem;
     line-height: 1.4;
-    color: #666;
+    color: #000;
 }
 
 .service-item:hover p {
-    color: #ddd;
+    color: #fff;
 }
 
 @media (max-width: 1024px) {
@@ -716,7 +716,7 @@ section p {
 .process-steps span {
     display: block;
     font-size: 28px;
-    color: #2a2a2a;
+    color: #000;
     margin-bottom: 10px;
     font-weight: 700;
 }
@@ -1009,14 +1009,14 @@ section p {
 
 .footer-col a {
     display: block;
-    color: #cccccc;
+    color: #fff;
     text-decoration: underline;
     margin-bottom: 0.6rem;
     transition: all 0.3s ease;
 }
 
 .footer-col a:hover {
-    color: #888888;
+    color: #fff;
 }
 
 .footer-bottom {
@@ -1132,7 +1132,7 @@ h1 {
 }
 
 h2 {
-    color: #888888;
+    color: #000;
     margin-top: 60px;
 }
 
@@ -1146,7 +1146,7 @@ h2 {
 
 .hero-specific p {
     font-size: 20px;
-    color: #ccc;
+    color: #fff;
 }
 
 .btn-custom {
