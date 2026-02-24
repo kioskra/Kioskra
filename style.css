@@ -80,7 +80,7 @@ a {
     letter-spacing: 3px;
     text-transform: uppercase;
     padding-left: 100%;
-    animation: marquee 15s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 /* MARQUEE ANIMATION */
