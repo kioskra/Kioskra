@@ -87,6 +87,80 @@
         }
         .dot.active { background-color: #1a1a1a; }
 
+        /* --- Service Cards Section --- */
+        .service-cards-container {
+            background: linear-gradient(135deg, #17a697 0%, #138d80 100%);
+            padding: 60px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .service-cards-heading {
+            margin-bottom: 50px;
+        }
+
+        .service-cards-heading h2 {
+            font-size: 2.5rem;
+            margin: 0 0 15px;
+        }
+
+        .service-cards-heading p {
+            font-size: 1rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 30px;
+            border-radius: 12px;
+            width: 250px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.6);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+            opacity: 0.85;
+        }
+
         /* --- Video Section Styles --- */
         .video-container {
             position: relative;
@@ -158,110 +232,167 @@
     </nav>
 </header>
 
-<section class="portfolio-header">
-    <h1>Our Project Portfolio</h1>
-    <p>Complete exhibition solutions from concept to execution with in-house expertise.</p>
+<section class="service-cards-container">
+    <div class="service-cards-heading">
+        <h2>Our Portfolio</h2>
+        <p>Explore our complete project lifecycle from concept to delivery</p>
+    </div>
+    <div class="service-cards">
+        <div class="service-card" onclick="scrollToCarousel('design-carousel')">
+            <div class="service-icon">🎨</div>
+            <h3>Design</h3>
+            <p>Innovative 3D concepts and creative exhibition designs tailored to your vision</p>
+        </div>
+        <div class="service-card" onclick="scrollToCarousel('execution-carousel')">
+            <div class="service-icon">🏗️</div>
+            <h3>On-ground Execution</h3>
+            <p>Expert installation and execution of exhibition spaces with precision</p>
+        </div>
+        <div class="service-card" onclick="scrollToCarousel('delivered-carousel')">
+            <div class="service-icon">✓</div>
+            <h3>Delivered</h3>
+            <p>Completed projects showcasing successful exhibitions and installations</p>
+        </div>
+    </div>
 </section>
 
-<section class="portfolio-section">
+<!-- DESIGN CAROUSEL SECTION -->
+<section class="portfolio-section" id="design-carousel">
     <div class="section-heading">
         <h2>Design Gallery</h2>
     </div>
     <div class="premium-carousel-container">
-        <div class="premium-carousel-item active"><img src="Source Images/1.jpeg" alt="Design 1"></div>
-        <div class="premium-carousel-item"><img src="Source Images/1.jpg" alt="Design 2"></div>
-        <div class="premium-carousel-item"><img src="Source Images/2.jpeg" alt="Design 3"></div>
-        <div class="premium-carousel-item"><img src="Source Images/2.png" alt="Design 4"></div>
-        <div class="premium-carousel-item"><img src="Source Images/3.jpeg" alt="Design 5"></div>
-        <div class="premium-carousel-item"><img src="Source Images/3.jpg" alt="Design 6"></div>
-        <div class="premium-carousel-item"><img src="Source Images/5.jpg" alt="Design 7"></div>
-        <div class="premium-carousel-item"><img src="Source Images/6.gif" alt="Design 8"></div>
-        <div class="premium-carousel-item"><img src="Source Images/7.png" alt="Design 9"></div>
-        <div class="premium-carousel-item"><img src="Source Images/8.jpeg" alt="Design 10"></div>
-        <div class="premium-carousel-item"><img src="Source Images/9.jpeg" alt="Design 11"></div>
-        <div class="premium-carousel-item"><img src="Source Images/10.jpeg" alt="Design 12"></div>
-        <div class="premium-carousel-item"><img src="Source Images/11.jpeg" alt="Design 13"></div>
-        <div class="premium-carousel-item"><img src="Source Images/12.jpeg" alt="Design 14"></div>
-        <div class="premium-carousel-item"><img src="Source Images/13.jpeg" alt="Design 15"></div>
-        <div class="premium-carousel-item"><img src="Source Images/14.jpeg" alt="Design 16"></div>
-        <div class="premium-carousel-item"><img src="Source Images/15.jpeg" alt="Design 17"></div>
-        <div class="premium-carousel-item"><img src="Source Images/16.jpeg" alt="Design 18"></div>
-        <div class="premium-carousel-item"><img src="Source Images/17.jpeg" alt="Design 19"></div>
-        <div class="premium-carousel-item"><img src="Source Images/21.jpeg" alt="Design 23"></div>
-        <div class="premium-carousel-item"><img src="Source Images/22.jpeg" alt="Design 24"></div>
-        <div class="premium-carousel-item"><img src="Source Images/23.jpeg" alt="Design 25"></div>
-        <div class="premium-carousel-item"><img src="Source Images/24.jpeg" alt="Design 26"></div>
-        <div class="premium-carousel-item"><img src="Source Images/25.jpeg" alt="Design 27"></div>
-        <div class="premium-carousel-item"><img src="Source Images/27.jpeg" alt="Design 28"></div>
-        <div class="premium-carousel-item"><img src="Source Images/28.jpeg" alt="Design 29"></div>
-        <div class="premium-carousel-item"><img src="Source Images/29.jpeg" alt="Design 30"></div>
-        <div class="premium-carousel-item"><img src="Source Images/29 (2).jpeg" alt="Design 31"></div>
-        <div class="premium-carousel-item"><img src="Source Images/30.jpeg" alt="Design 32"></div>
-        <div class="premium-carousel-item"><img src="Source Images/31.jpeg" alt="Design 33"></div>
-        <div class="premium-carousel-item"><img src="Source Images/32.jpeg" alt="Design 34"></div>
-        <div class="premium-carousel-item"><img src="Source Images/33.jpeg" alt="Design 35"></div>
-        <div class="premium-carousel-item"><img src="Source Images/34.jpeg" alt="Design 36"></div>
-        <div class="premium-carousel-item"><img src="Source Images/35.jpeg" alt="Design 37"></div>
-        <div class="premium-carousel-item"><img src="Source Images/36.jpeg" alt="Design 38"></div>
-        <div class="premium-carousel-item"><img src="Source Images/37.jpeg" alt="Design 39"></div>
-        <div class="premium-carousel-item"><img src="Source Images/38.jpeg" alt="Design 40"></div>
-        <div class="premium-carousel-item"><img src="Source Images/39.jpeg" alt="Design 41"></div>
-        <div class="premium-carousel-item"><img src="Source Images/40.jpeg" alt="Design 42"></div>
-        <div class="premium-carousel-item"><img src="Source Images/41.jpeg" alt="Design 43"></div>
-        <div class="premium-carousel-item"><img src="Source Images/42.jpeg" alt="Design 44"></div>
-        <div class="premium-carousel-item"><img src="Source Images/43.jpeg" alt="Design 45"></div>
+        <div class="premium-carousel-item active"><img src="Source Images/Designs/1 (1).jpeg" alt="Design 1"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (1).jpg" alt="Design 2"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (2).jpeg" alt="Design 3"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (2).jpg" alt="Design 4"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (3).jpeg" alt="Design 5"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (3).jpg" alt="Design 6"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (4).jpeg" alt="Design 7"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (1).png" alt="Design 8"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (2).png" alt="Design 9"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (5).jpeg" alt="Design 10"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (6).jpeg" alt="Design 11"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (7).jpeg" alt="Design 12"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (8).jpeg" alt="Design 13"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (9).jpeg" alt="Design 14"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (10).jpeg" alt="Design 15"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (11).jpeg" alt="Design 16"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (12).jpeg" alt="Design 17"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (13).jpeg" alt="Design 18"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (14).jpeg" alt="Design 19"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (15).jpeg" alt="Design 20"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (16).jpeg" alt="Design 21"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (17).jpeg" alt="Design 22"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (1).gif" alt="Design 23"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Designs/1 (1).png" alt="Design 24"></div>
+        <button class="nav-btn prev" onclick="changeImage('design', -1)">&#10094;</button>
+        <button class="nav-btn next" onclick="changeImage('design', 1)">&#10095;</button>
+    </div>
+    <div class="carousel-dots" id="design-dots">
+        <span class="dot active" onclick="setImage('design', 0)"></span>
+        <span class="dot" onclick="setImage('design', 1)"></span>
+        <span class="dot" onclick="setImage('design', 2)"></span>
+        <span class="dot" onclick="setImage('design', 3)"></span>
+        <span class="dot" onclick="setImage('design', 4)"></span>
+        <span class="dot" onclick="setImage('design', 5)"></span>
+        <span class="dot" onclick="setImage('design', 6)"></span>
+        <span class="dot" onclick="setImage('design', 7)"></span>
+        <span class="dot" onclick="setImage('design', 8)"></span>
+        <span class="dot" onclick="setImage('design', 9)"></span>
+        <span class="dot" onclick="setImage('design', 10)"></span>
+        <span class="dot" onclick="setImage('design', 11)"></span>
+        <span class="dot" onclick="setImage('design', 12)"></span>
+        <span class="dot" onclick="setImage('design', 13)"></span>
+        <span class="dot" onclick="setImage('design', 14)"></span>
+        <span class="dot" onclick="setImage('design', 15)"></span>
+        <span class="dot" onclick="setImage('design', 16)"></span>
+        <span class="dot" onclick="setImage('design', 17)"></span>
+        <span class="dot" onclick="setImage('design', 18)"></span>
+        <span class="dot" onclick="setImage('design', 19)"></span>
+        <span class="dot" onclick="setImage('design', 20)"></span>
+        <span class="dot" onclick="setImage('design', 21)"></span>
+        <span class="dot" onclick="setImage('design', 22)"></span>
+        <span class="dot" onclick="setImage('design', 23)"></span>
+    </div>
+</section>
 
-        <button class="nav-btn prev" onclick="changeImage(-1)">&#10094;</button>
-        <button class="nav-btn next" onclick="changeImage(1)">&#10095;</button>
+<!-- ON-GROUND EXECUTION CAROUSEL SECTION -->
+<section class="portfolio-section" id="execution-carousel">
+    <div class="section-heading">
+        <h2>On-ground Execution</h2>
     </div>
-    <div class="carousel-dots">
-        <span class="dot active" onclick="setImage(0)"></span>
-        <span class="dot" onclick="setImage(1)"></span>
-        <span class="dot" onclick="setImage(2)"></span>
-        <span class="dot" onclick="setImage(3)"></span>
-        <span class="dot" onclick="setImage(4)"></span>
-        <span class="dot" onclick="setImage(5)"></span>
-        <span class="dot" onclick="setImage(6)"></span>
-        <span class="dot" onclick="setImage(7)"></span>
-        <span class="dot" onclick="setImage(8)"></span>
-        <span class="dot" onclick="setImage(9)"></span>
-        <span class="dot" onclick="setImage(10)"></span>
-        <span class="dot" onclick="setImage(11)"></span>
-        <span class="dot" onclick="setImage(12)"></span>
-        <span class="dot" onclick="setImage(13)"></span>
-        <span class="dot" onclick="setImage(14)"></span>
-        <span class="dot" onclick="setImage(15)"></span>
-        <span class="dot" onclick="setImage(16)"></span>
-        <span class="dot" onclick="setImage(17)"></span>
-        <span class="dot" onclick="setImage(18)"></span>
-        <span class="dot" onclick="setImage(19)"></span>
-        <span class="dot" onclick="setImage(20)"></span>
-        <span class="dot" onclick="setImage(21)"></span>
-        <span class="dot" onclick="setImage(22)"></span>
-        <span class="dot" onclick="setImage(23)"></span>
-        <span class="dot" onclick="setImage(24)"></span>
-        <span class="dot" onclick="setImage(25)"></span>
-        <span class="dot" onclick="setImage(26)"></span>
-        <span class="dot" onclick="setImage(27)"></span>
-        <span class="dot" onclick="setImage(28)"></span>
-        <span class="dot" onclick="setImage(29)"></span>
-        <span class="dot" onclick="setImage(30)"></span>
-        <span class="dot" onclick="setImage(31)"></span>
-        <span class="dot" onclick="setImage(32)"></span>
-        <span class="dot" onclick="setImage(33)"></span>
-        <span class="dot" onclick="setImage(34)"></span>
-        <span class="dot" onclick="setImage(35)"></span>
-        <span class="dot" onclick="setImage(36)"></span>
-        <span class="dot" onclick="setImage(37)"></span>
-        <span class="dot" onclick="setImage(38)"></span>
-        <span class="dot" onclick="setImage(39)"></span>
-        <span class="dot" onclick="setImage(40)"></span>
-        <span class="dot" onclick="setImage(41)"></span>
-        <span class="dot" onclick="setImage(42)"></span>
-        <span class="dot" onclick="setImage(43)"></span>
-        <span class="dot" onclick="setImage(44)"></span>
+    <div class="premium-carousel-container">
+        <div class="premium-carousel-item active"><img src="Source Images/Onground working/1.jpeg" alt="Execution 1"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Onground working/2.jpeg" alt="Execution 2"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Onground working/3.jpeg" alt="Execution 3"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Onground working/4.jpeg" alt="Execution 4"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Onground working/5.jpeg" alt="Execution 5"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Onground working/6.jpeg" alt="Execution 6"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Onground working/7.jpeg" alt="Execution 7"></div>
+        <button class="nav-btn prev" onclick="changeImage('execution', -1)">&#10094;</button>
+        <button class="nav-btn next" onclick="changeImage('execution', 1)">&#10095;</button>
     </div>
-    <h6>Note: The following projects represent exhibition designs created by our founder during prior professional engagements. Execution was carried out by the respective firms</h6>
+    <div class="carousel-dots" id="execution-dots">
+        <span class="dot active" onclick="setImage('execution', 0)"></span>
+        <span class="dot" onclick="setImage('execution', 1)"></span>
+        <span class="dot" onclick="setImage('execution', 2)"></span>
+        <span class="dot" onclick="setImage('execution', 3)"></span>
+        <span class="dot" onclick="setImage('execution', 4)"></span>
+        <span class="dot" onclick="setImage('execution', 5)"></span>
+        <span class="dot" onclick="setImage('execution', 6)"></span>
+    </div>
+</section>
+
+<!-- DELIVERED CAROUSEL SECTION -->
+<section class="portfolio-section" id="delivered-carousel">
+    <div class="section-heading">
+        <h2>Delivered Projects</h2>
+    </div>
+    <div class="premium-carousel-container">
+        <div class="premium-carousel-item active"><img src="Source Images/Delivered/1 (1).jpeg" alt="Delivered 1"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (2).jpeg" alt="Delivered 2"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (3).jpeg" alt="Delivered 3"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (4).jpeg" alt="Delivered 4"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (5).jpeg" alt="Delivered 5"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (6).jpeg" alt="Delivered 6"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (7).jpeg" alt="Delivered 7"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (8).jpeg" alt="Delivered 8"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (9).jpeg" alt="Delivered 9"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (10).jpeg" alt="Delivered 10"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (11).jpeg" alt="Delivered 11"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (12).jpeg" alt="Delivered 12"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (13).jpeg" alt="Delivered 13"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (14).jpeg" alt="Delivered 14"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (15).jpeg" alt="Delivered 15"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (16).jpeg" alt="Delivered 16"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (17).jpeg" alt="Delivered 17"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (18).jpeg" alt="Delivered 18"></div>
+        <div class="premium-carousel-item"><img src="Source Images/Delivered/1 (19).jpeg" alt="Delivered 19"></div>
+        <button class="nav-btn prev" onclick="changeImage('delivered', -1)">&#10094;</button>
+        <button class="nav-btn next" onclick="changeImage('delivered', 1)">&#10095;</button>
+    </div>
+    <div class="carousel-dots" id="delivered-dots">
+        <span class="dot active" onclick="setImage('delivered', 0)"></span>
+        <span class="dot" onclick="setImage('delivered', 1)"></span>
+        <span class="dot" onclick="setImage('delivered', 2)"></span>
+        <span class="dot" onclick="setImage('delivered', 3)"></span>
+        <span class="dot" onclick="setImage('delivered', 4)"></span>
+        <span class="dot" onclick="setImage('delivered', 5)"></span>
+        <span class="dot" onclick="setImage('delivered', 6)"></span>
+        <span class="dot" onclick="setImage('delivered', 7)"></span>
+        <span class="dot" onclick="setImage('delivered', 8)"></span>
+        <span class="dot" onclick="setImage('delivered', 9)"></span>
+        <span class="dot" onclick="setImage('delivered', 10)"></span>
+        <span class="dot" onclick="setImage('delivered', 11)"></span>
+        <span class="dot" onclick="setImage('delivered', 12)"></span>
+        <span class="dot" onclick="setImage('delivered', 13)"></span>
+        <span class="dot" onclick="setImage('delivered', 14)"></span>
+        <span class="dot" onclick="setImage('delivered', 15)"></span>
+        <span class="dot" onclick="setImage('delivered', 16)"></span>
+        <span class="dot" onclick="setImage('delivered', 17)"></span>
+        <span class="dot" onclick="setImage('delivered', 18)"></span>
+    </div>
 </section>
 
 <section class="portfolio-section portfolio-dark">
@@ -331,27 +462,76 @@
 
 </section>
 <script>
-    // --- Image Carousel ---
-    let imgIdx = 0;
-    const imgSlides = document.querySelectorAll('.premium-carousel-item');
-    const dots = document.querySelectorAll('.dot');
+    // --- Multi-Carousel State ---
+    const carouselState = {
+        design: { index: 0, slides: null, dots: null },
+        execution: { index: 0, slides: null, dots: null },
+        delivered: { index: 0, slides: null, dots: null }
+    };
 
-    function updateImage() {
-        imgSlides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        imgSlides[imgIdx].classList.add('active');
-        dots[imgIdx].classList.add('active');
+    // Initialize carousels
+    function initCarousels() {
+        // Design carousel
+        const designContainer = document.getElementById('design-carousel');
+        if (designContainer) {
+            carouselState.design.slides = designContainer.querySelectorAll('.premium-carousel-item');
+            carouselState.design.dots = document.getElementById('design-dots').querySelectorAll('.dot');
+        }
+
+        // Execution carousel
+        const executionContainer = document.getElementById('execution-carousel');
+        if (executionContainer) {
+            carouselState.execution.slides = executionContainer.querySelectorAll('.premium-carousel-item');
+            carouselState.execution.dots = document.getElementById('execution-dots').querySelectorAll('.dot');
+        }
+
+        // Delivered carousel
+        const deliveredContainer = document.getElementById('delivered-carousel');
+        if (deliveredContainer) {
+            carouselState.delivered.slides = deliveredContainer.querySelectorAll('.premium-carousel-item');
+            carouselState.delivered.dots = document.getElementById('delivered-dots').querySelectorAll('.dot');
+        }
     }
 
-    function changeImage(n) {
-        imgIdx = (imgIdx + n + imgSlides.length) % imgSlides.length;
-        updateImage();
+    // Update carousel display
+    function updateCarousel(carouselName) {
+        const carousel = carouselState[carouselName];
+        if (!carousel.slides || !carousel.dots) return;
+
+        carousel.slides.forEach(s => s.classList.remove('active'));
+        carousel.dots.forEach(d => d.classList.remove('active'));
+        carousel.slides[carousel.index].classList.add('active');
+        carousel.dots[carousel.index].classList.add('active');
     }
 
-    function setImage(n) {
-        imgIdx = n;
-        updateImage();
+    // Change image in a carousel
+    function changeImage(carouselName, n) {
+        const carousel = carouselState[carouselName];
+        if (!carousel.slides) return;
+        
+        carousel.index = (carousel.index + n + carousel.slides.length) % carousel.slides.length;
+        updateCarousel(carouselName);
     }
+
+    // Set specific image in a carousel
+    function setImage(carouselName, n) {
+        const carousel = carouselState[carouselName];
+        if (!carousel.slides) return;
+        
+        carousel.index = n;
+        updateCarousel(carouselName);
+    }
+
+    // Scroll to carousel section
+    function scrollToCarousel(carouselId) {
+        const element = document.getElementById(carouselId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', initCarousels);
 
     // --- Video Carousel ---
     let vidIdx = 0;
